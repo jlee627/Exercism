@@ -3,6 +3,21 @@
 // convenience to get you started writing code faster.
 //
 
+// More efficient answer
+ const strandMap = {
+   'G': 'C',
+   'C': 'G',
+   'T': 'A',
+   'A': 'U',
+ }
+
+export const toRna = sequence => [...sequence]
+      .map(transcribe => strandMap[transcribe]).join('');
+
+
+
+/*
+// Original Answer
 export const toRna = sequence => {
   var transcription = '';
 
@@ -28,4 +43,4 @@ export const toRna = sequence => {
   }
 
   return transcription;
-};
+}; */
